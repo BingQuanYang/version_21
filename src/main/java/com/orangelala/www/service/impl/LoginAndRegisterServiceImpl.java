@@ -1,4 +1,4 @@
-package com.orangelala.www.dao.impl;
+package com.orangelala.www.service.impl;
 
 import com.orangelala.www.dao.UserDao;
 import com.orangelala.www.dao.impl.UserDaoImpl;
