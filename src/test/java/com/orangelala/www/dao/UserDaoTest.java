@@ -52,4 +52,32 @@ public class UserDaoTest {
         int i = userDao.updatePaymentPasswordById("1","123456");
         System.out.println(i);
     }
+    @Test
+    public void selectUserByemail(){
+        User user = userDao.selectUserByemail("2606211206@qq.com");
+        System.out.println(user);
+    }
+    @Test
+    public void selectUserByPhone(){
+        User user = userDao.selectUserByPhone("19877989771");
+        System.out.println(user);
+    }
+    @Test
+    public void insertEmailAndLoginPassword(){
+        User user = new User();
+        user.setId("2");
+        user.setEmail("2242003343@qq.com");
+        user.setLoginPassword("123456");
+        int i = userDao.insertEmailAndLoginPassword(user);
+        System.out.println(i);
+    }
+    @Test
+    public void insertPhoneAndLoginPassword(){
+        User user = new User();
+        user.setId("3");
+        user.setTelephoneNumber("19877989775");
+        user.setLoginPassword("123456");
+        int i = userDao.insertPhoneAndLoginPassword(user);
+        System.out.println(i);
+    }
 }
