@@ -23,9 +23,15 @@ public class User {
   //登录密码
   @Column("login_password")
   private String loginPassword;
+  //支付密码
+  @Column("payment_password")
+  private String paymentPassword;
   //身份证号
   @Column("id_number")
   private String idNumber;
+  //头像
+  @Column("head_portrait")
+  private String headPortrait;
   //是否有效
   @Column("is_available")
   private long isAvailable;
@@ -102,6 +108,13 @@ public class User {
     this.loginPassword = loginPassword;
   }
 
+  public String getPaymentPassword() {
+    return paymentPassword;
+  }
+
+  public void setPaymentPassword(String paymentPassword) {
+    this.paymentPassword = paymentPassword;
+  }
 
   public String getIdNumber() {
     return idNumber;
@@ -111,6 +124,13 @@ public class User {
     this.idNumber = idNumber;
   }
 
+  public String getHeadPortrait() {
+    return headPortrait;
+  }
+
+  public void setHeadPortrait(String headPortrait) {
+    this.headPortrait = headPortrait;
+  }
 
   public long getIsAvailable() {
     return isAvailable;
