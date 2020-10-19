@@ -27,26 +27,8 @@ public interface UserDao {
      */
     User selectUserByPhoneAndLoginPassword(User user);
 
-    /**
-     * 更新用户信息
-     * @param user
-     * @return
-     */
-    int updateUserById(User user);
 
-    /**
-     * 根据用户id修改登录密码
-     * @param id id
-     * @param loginPassword 登录密码需要更新的
-     * @return
-     */
-    int updateLoginPasswordById(String id,String loginPassword);
+    int updateUser(User user);
 
-    /**
-     *根据用户id修改支付密码
-     * @param id
-     * @param paymentPassword
-     * @return
-     */
-    int updatePaymentPasswordById(String id,String paymentPassword);
+
 }

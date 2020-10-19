@@ -140,4 +140,21 @@ public class User {
     this.isAvailable = isAvailable;
   }
 
+  @Override
+  public String toString() {
+    return "User{" +
+            "id='" + id + '\'' +
+            ", nickName='" + nickName + '\'' +
+            ", username='" + username + '\'' +
+            ", sex='" + sex + '\'' +
+            ", birthday=" + birthday +
+            ", telephoneNumber='" + telephoneNumber + '\'' +
+            ", email='" + email + '\'' +
+            ", loginPassword='" + loginPassword + '\'' +
+            ", paymentPassword='" + paymentPassword + '\'' +
+            ", idNumber='" + idNumber + '\'' +
+            ", headPortrait='" + headPortrait + '\'' +
+            ", isAvailable=" + isAvailable +
+            '}';
+  }
 }
