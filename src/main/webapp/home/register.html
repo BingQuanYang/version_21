@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 	<head lang="en">
 		<meta charset="UTF-8">
 		<title>注册</title>
@@ -9,11 +8,13 @@
 		<meta name="format-detection" content="telephone=no">
 		<meta name="renderer" content="webkit">
 		<meta http-equiv="Cache-Control" content="no-siteapp" />
-
+		<link href="../css/Lobibox.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="../AmazeUI-2.4.2/assets/css/amazeui.min.css" />
 		<link href="../css/dlstyle.css" rel="stylesheet" type="text/css">
 		<script src="../AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
 		<script src="../AmazeUI-2.4.2/assets/js/amazeui.min.js"></script>
+		<script src="../js/Lobibox.js"></script>
+		<script src="../js/register.js"></script>
 
 	</head>
 
@@ -59,7 +60,7 @@
 										</label>
 							  	</div>
 										<div class="am-cf">
-											<input type="submit" name="" value="注册" class="am-btn am-btn-primary am-btn-sm am-fl">
+											<input type="submit" disabled="disabled" id="register1" name="" value="注册" class="am-btn am-btn-primary am-btn-sm am-fl">
 										</div>
 
 								</div>
@@ -78,20 +79,20 @@
 										</div>
                  <div class="user-pass">
 								    <label for="password"><i class="am-icon-lock"></i></label>
-								    <input type="password" name="" id="password" placeholder="设置密码">
+								    <input type="password" name="" id="password2" placeholder="设置密码">
                  </div>										
                  <div class="user-pass">
 								    <label for="passwordRepeat"><i class="am-icon-lock"></i></label>
-								    <input type="password" name="" id="passwordRepeat" placeholder="确认密码">
+								    <input type="password" name="" id="passwordRepeat2" placeholder="确认密码">
                  </div>	
 									</form>
 								 <div class="login-links">
 										<label for="reader-me">
-											<input id="reader-me" type="checkbox"> 点击表示您同意商城《服务协议》
+											<input id="reader-me2" type="checkbox"> 点击表示您同意商城《服务协议》
 										</label>
 							  	</div>
 										<div class="am-cf">
-											<input type="submit" name="" value="注册" class="am-btn am-btn-primary am-btn-sm am-fl">
+											<input type="submit" name="" id="register2" disabled="disabled" value="注册" class="am-btn am-btn-primary am-btn-sm am-fl">
 										</div>
 								
 									<hr>
