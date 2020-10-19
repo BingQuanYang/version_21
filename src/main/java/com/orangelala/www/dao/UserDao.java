@@ -49,4 +49,32 @@ public interface UserDao {
      * @return
      */
     int updatePaymentPasswordById(String id,String paymentPassword);
+
+    /**
+     *  根据邮箱查用户信息
+     * @param email
+     * @return
+     */
+    User selectUserByemail(String email);
+
+    /**
+     * 根据电话号码查用户信息
+     * @param phone
+     * @return
+     */
+    User selectUserByPhone(String phone);
+
+    /**
+     * 根据邮箱和登录密码添加用户
+     * @param user
+     * @return
+     */
+    int insertEmailAndLoginPassword(User user);
+
+    /**
+     *根据电话号码和登录密码添加用户
+     * @param user
+     * @return
+     */
+    int insertPhoneAndLoginPassword(User user);
 }

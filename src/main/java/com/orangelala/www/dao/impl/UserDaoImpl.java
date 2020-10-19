@@ -45,4 +45,28 @@ public class UserDaoImpl implements UserDao {
         String sql = "update user set payment_password=? where is_available=1 and id=?";
         return DBManager.commonUpdate(sql,paymentPassword,id);
     }
+
+    @Override
+    public User selectUserByemail(String email) {
+        String sql = "select * from user where is_available=1 and email=?";
+        return DBManager.selectOne(sql,User.class,email);
+    }
+
+    @Override
+    public User selectUserByPhone(String phone) {
+        String sql = "select * from user where is_available=1 and telephone_number=?";
+        return DBManager.selectOne(sql,User.class,phone);
+    }
+
+    @Override
+    public int insertEmailAndLoginPassword(User user) {
+        String sql = "insert into user(id,email,login_password) values(?,?,?)";
+        return DBManager.commonUpdate(sql,user.getId(),user.getEmail(),user.getLoginPassword());
+    }
+
+    @Override
+    public int insertPhoneAndLoginPassword(User user) {
+        String sql = "insert into user(id,telephone_number,login_password) values(?,?,?)";
+        return DBManager.commonUpdate(sql,user.getId(),user.getTelephoneNumber(),user.getLoginPassword());
+    }
 }
