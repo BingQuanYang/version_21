@@ -5,7 +5,7 @@
 
 const BASE_URL = "http://localhost:8080/api"
 let INDEX_URL = BASE_URL + "/HomeController"
-const IMAGE = "../images/cake.png"
+const IMAGE = "../images/"
 
 $(function () {
     $.get(INDEX_URL, function (result) {
@@ -34,34 +34,22 @@ $(function () {
                                             $("<i>")
                                                 .append(
                                                     $("<img>")
-                                                        .attr("src", IMAGE)
+                                                        .attr("src", IMAGE+c.image)
                                                 )
 
                                         )
-                                    /*.append($('<a class="ml-22">').text(c.classification) )*/
+                                    .append($('<a class="ml-22">').text(c.classification) )
                                 )
-                            /*.append($("<div class=\"menu-item menu-in top\">")
-                                .append(
-                                    $("<div class=\"area-in\">")
-                                        .append(
-                                            $("<div class=\"area-bg\">")
-                                                .append(
-                                                    $("<div class=\"menu-srot\">")
-                                                        .append(
-                                                            $("<div class=\"sort-side\">")
-                                                                .append(
-                                                                    $("<dl class=\"dl-sort\">")
-                                                                )
-                                                        )
-                                                )
-                                        )
-                                )
-                            )*/
                         )
 
             )
         }
     }
+
+    /**
+     * 作者：全
+     * @param seckills
+     */
     function showSeckill(seckills){
         for (const seckill of seckills) {
             $("#sale").append(
@@ -89,4 +77,7 @@ $(function () {
             )
         }
     }
+
+
+
 })
