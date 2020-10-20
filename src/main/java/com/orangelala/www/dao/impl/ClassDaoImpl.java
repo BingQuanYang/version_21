@@ -20,7 +20,7 @@ public class ClassDaoImpl implements ClassDao {
     }
     @Override
     public List<Headlines> selectHeadlinesInformation() {
-        String sql = "select h_id,headlines from headlines";
+        String sql = "select h_id,headlines from headlines limit 0,7";
         Class<Headlines> headlinesClass = Headlines.class;
         List<Headlines> headlines = DBManager.selectList(sql, headlinesClass, null);
         return headlines;
