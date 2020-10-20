@@ -2,7 +2,7 @@
  * 作者：全
  * @type {string}
  */
-const EMAIL_REGISTER = "http://localhost:8080/app/EmailRegisterController"
+const EMAIL_REGISTER = "http://localhost:8080/api/EmailRegisterController"
 $(function () {
     $("#reader-me").change(function () {
         var checked = document.getElementById("reader-me").checked;
@@ -44,6 +44,11 @@ $(function () {
             email:email,
             password:password
         }
+        var reg = new RegExp("^[a-z0-9A-Z]+[- | a-z0-9A-Z . _]+@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-z]{2,}$");
+        if(!reg.test(email)) {
+            showErrorBox("邮箱格式不正确，请重新输入！");
+            return;
+        }
         $.post(EMAIL_REGISTER,params,function (result) {
             if(result.status === 200){
                 location.href="login.html";
@@ -55,7 +60,6 @@ $(function () {
             }
         })
     });
-
 })
 
 function showErrorBox(message) {

@@ -2,7 +2,7 @@
  * 作者：全
  * @type {string}
  */
-const LOGIN_URL = "http://localhost:8080/app/LoginController"
+const LOGIN_URL = "http://localhost:8080/api/LoginController"
 $(function () {
     //从Cookie中获取数据
     var username = getCookie("username");
