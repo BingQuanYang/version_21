@@ -11,6 +11,7 @@ $(function () {
     $.get(INDEX_URL, function (result) {
         if (result.status === 200) {
             showClassification(result.data.classes);
+            showHeadlines(result.data.headlines)
             showSeckill(result.data.seckill);
         } else {
             alert("系统繁忙!请稍后再试!!!")
@@ -45,7 +46,17 @@ $(function () {
             )
         }
     }
-
+    function showHeadlines(headlines) {
+        for (const co of headlines){
+            $("#jjjjdk45").append(
+                $("<li>").append(
+                    $("<a target=\"_blank\">")
+                        .attr("href","#")
+                        .text(co.headlines)
+                )
+            )
+        }
+    }
     /**
      * 作者：全
      * @param seckills
