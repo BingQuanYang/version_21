@@ -4,6 +4,10 @@ import com.orangelala.www.entity.User;
 
 /**
  * 作者：全
+ *
+ *
+ *
+ * 
  */
 public interface UserDao {
     /**
