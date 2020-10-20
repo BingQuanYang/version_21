@@ -134,7 +134,6 @@ public class DBManager {
                     }else {
                         name = field.getName();
                     }
-                    System.out.println(name);
                     //4.通过属性名当成字段名获取字段数据
                     Object value = rSet.getObject(name);
                     //5.给对象中的属性赋值
