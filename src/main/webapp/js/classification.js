@@ -49,8 +49,6 @@ $(function () {
     /**
      * 作者：全
      * @param seckills
-     *
-     *
      */
     function showSeckill(seckills){
         for (const seckill of seckills) {
