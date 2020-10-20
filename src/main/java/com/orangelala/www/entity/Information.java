@@ -17,6 +17,8 @@ public class Information {
   @Column("original_price")
   private double originalPrice;//商品原价
   private String address;//商品地址
+  @Column("c_id")
+  private String cId;
   private String freight;//商品快递费
   @Column("monthly_sales")
   private String monthlySales;//商品月销量
@@ -89,6 +91,21 @@ public class Information {
     this.address = address;
   }
 
+  public long getpId() {
+    return pId;
+  }
+
+  public void setpId(long pId) {
+    this.pId = pId;
+  }
+
+  public String getcId() {
+    return cId;
+  }
+
+  public void setcId(String cId) {
+    this.cId = cId;
+  }
 
   public String getFreight() {
     return freight;
@@ -133,5 +150,4 @@ public class Information {
   public void setStock(String stock) {
     this.stock = stock;
   }
-
 }
