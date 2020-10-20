@@ -1,6 +1,7 @@
 package com.orangelala.www.utils;
 
 import com.orangelala.www.entity.Classification;
+import com.orangelala.www.entity.Headlines;
 import com.orangelala.www.entity.Information;
 
 import java.util.List;
@@ -8,6 +9,16 @@ import java.util.List;
 public class HomeData {
     private List<Classification> classes;
     private List<Information> seckill;
+    private List<Headlines> headlines;
+
+
+    public List<Headlines> getHeadlines() {
+        return headlines;
+    }
+
+    public void setHeadlines(List<Headlines> headlines) {
+        this.headlines = headlines;
+    }
 
     public List<Classification> getClasses() {
         return classes;
