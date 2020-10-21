@@ -13,6 +13,24 @@ public class HomeData {
     private List<Headlines> headlines;
     private List<Information> information;
     private List<Category> categories;
+    private List<Information> information1;
+    private List<Category> categories1;
+
+    public List<Information> getInformation1() {
+        return information1;
+    }
+
+    public void setInformation1(List<Information> information1) {
+        this.information1 = information1;
+    }
+
+    public List<Category> getCategories1() {
+        return categories1;
+    }
+
+    public void setCategories1(List<Category> categories1) {
+        this.categories1 = categories1;
+    }
 
     public List<Category> getCategories() {
         return categories;
