@@ -47,13 +47,13 @@ CREATE TABLE `change` (
 -- ----------------------------
 -- Records of change
 -- ----------------------------
-INSERT INTO `change` VALUES ('1', '1', '../images/tw1.jpg\"');
-INSERT INTO `change` VALUES ('2', '1', '../images/tw2.jpg\"');
-INSERT INTO `change` VALUES ('3', '1', '../images/tw3.jpg\"');
-INSERT INTO `change` VALUES ('4', '1', '../images/tw4.jpg\"');
-INSERT INTO `change` VALUES ('5', '1', '../images/tw5.jpg\"');
-INSERT INTO `change` VALUES ('6', '1', '../images/tw6.jpg\"');
-INSERT INTO `change` VALUES ('7', '1', '../images/tw7.jpg\"');
+INSERT INTO `change` VALUES ('1', '1', '../images/tw1.jpg');
+INSERT INTO `change` VALUES ('2', '1', '../images/tw2.jpg');
+INSERT INTO `change` VALUES ('3', '1', '../images/tw3.jpg');
+INSERT INTO `change` VALUES ('4', '1', '../images/tw4.jpg');
+INSERT INTO `change` VALUES ('5', '1', '../images/tw5.jpg');
+INSERT INTO `change` VALUES ('6', '1', '../images/tw6.jpg');
+INSERT INTO `change` VALUES ('7', '1', '../images/tw7.jpg');
 
 -- ----------------------------
 -- Table structure for classification
