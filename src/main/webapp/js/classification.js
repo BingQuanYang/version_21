@@ -334,13 +334,13 @@ $(function () {
             $("#sale").append(
                 $('<div class="am-u-sm-3 sale-item">').append(
                     $('<div class="s-img">').append(
-                        $("<a href='../home/introduction.html?commodity_id="+seckill.pId+"'>").append(
+                        $("<a href='../home/introduction.html?commodity_id="+seckill.id+"'>").append(
                             $('<img src="../images/'+seckill.image+'"/>')
                         )
                     )
                 ).append(
                     $('<div class="s-info">').append(
-                        $("<a href='../home/introduction.html?commodity_id="+seckill.pId+"'>").append(
+                        $("<a href='../home/introduction.html?commodity_id="+seckill.id+"'>").append(
                             $('<p class="s-title">').text(seckill.shopDiscount)
                         )
                     ).append(
@@ -349,7 +349,7 @@ $(function () {
                         ).append(
                             $('<b>').text(seckill.originalPrice)
                         ).append(
-                            $('<a class="s-buy" href="../home/introduction.html?commodity_id='+seckill.pId+'">秒杀</a>')
+                            $('<a class="s-buy" href="../home/introduction.html?commodity_id='+seckill.id+'">秒杀</a>')
                         )
                     )
                 )
