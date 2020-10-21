@@ -4,6 +4,8 @@ $(function () {
     let params={
         commodity_id:commodity
     };
+
+
     $.get(dase,params,function (result) {
         if(result.status===200){
             //显示商品的所有信息
