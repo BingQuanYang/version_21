@@ -38,4 +38,10 @@ public class ShoppingCartDaoImpl implements ShoppingCartDao {
         String sql = "update shopping_cart set is_available=0 where is_available=1 and u_id=? and p_id=?";
         return DBManager.commonUpdate(sql,userId,commodity);
     }
+
+    @Override
+    public int selectNumberByUserIdAndCommodityId(String userId, String commodityId) {
+        String sql = "select number from shopping_cart where is_available=1 and u_id=? and p_id=?";
+        return DBManager.selectCount(sql,userId,commodityId);
+    }
 }

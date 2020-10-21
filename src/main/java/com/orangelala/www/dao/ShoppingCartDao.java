@@ -33,7 +33,7 @@ public interface ShoppingCartDao {
 
 
     /**
-     * 根据用户id和商品id查询购物车信息的总数
+     * 根据用户id和商品id查询购物车信息的总数（目的是判断购物车存不存指定用户指定商品）
      * @param userId    用户id
      * @param commodityId 商品id
      * @return
@@ -47,4 +47,6 @@ public interface ShoppingCartDao {
      * @return
      */
     int deleteshoppingCart(String userId,String commodity);
+
+    int selectNumberByUserIdAndCommodityId(String userId, String commodityId);
 }
