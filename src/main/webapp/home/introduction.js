@@ -1,13 +1,14 @@
 /*const INTOR_URL="http://localhost:8080/api";*/
-const INTOR_URL="http://localhost:.8080/api/";
+const INTOR_URL="http://localhost:63342/orange-lala/src/main/webapp/home";
 let detailUrl=INTOR_URL+"/introduction";
+
 $(function () {
     let commodity=getQueryString("commodity_id");
     let params={
         commodity_id:commodity
     };
     $.get(detailUrl,params,function (result) {
-        console.log(result.data)
+        console.log(result)
         if(result.status===200){
             //显示商品的所有信息
             showinformation(result.data);
