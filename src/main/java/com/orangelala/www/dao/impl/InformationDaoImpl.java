@@ -17,10 +17,10 @@ public class InformationDaoImpl implements InformationDao {
 
     @Override
     public List<Information> getRecommend(String id) {
-        Integer integer = Integer.valueOf(id);
-        Integer num=integer+6;
-        String sql=" select * from information limit "+integer+","+num+"  ";
-        List<Information> informations = DBManager.selectList(sql, Information.class);
+        int integer = Integer.valueOf(id);
+        Integer num=6;
+        String sql=" select * from information limit ?,?";
+        List<Information> informations = DBManager.selectList(sql, Information.class,(integer%3)*num,num);
         return informations;
     }
 
