@@ -6,7 +6,7 @@
 const BASE_URL = "http://localhost:8080/api"
 let INDEX_URL = BASE_URL + "/HomeController"
 const IMAGE = "../images/"
-const IMAGE2 ="../images2"
+const IMAGE2 ="../images2/"
 
 $(function () {
     $.get(INDEX_URL, function (result) {
@@ -160,17 +160,17 @@ $(function () {
                                 )
                         )
                         .append(
-                            $("<a>").attr("href","#")
+                            $("<a>").attr("href","introduction.html?commodity_id="+information[0].id)
                                 .append(
-                                    $('<img>').attr("src","../images/5.jpg")
+                                    $('<img>').attr("src",IMAGE2+information[0].image)
                                 )
                                 .append(
                                     $('<div class="outer-con ">')
                                         .append(
-                                            $('<div class="title ">').text("123")
+                                            $('<div class="title ">').text(information[0].shopDiscount)
                                         )
                                         .append(
-                                            $('<div class="sub-title ">').text("321")
+                                            $('<div class="sub-title ">').text(information[0].promotiomPrice)
                                         )
                                 )
                         )
@@ -185,18 +185,18 @@ $(function () {
                                 .append(
                                     $('<div class="outer-con ">')
                                         .append(
-                                            $('<div class="title ">').text("321")
+                                            $('<div class="title ">').text(information[1].shopDiscount)
                                         )
                                         .append(
-                                            $('<div class="sub-title ">').text("123")
+                                            $('<div class="sub-title ">').text(information[1].promotiomPrice)
                                         )
                                 )
                                 .append(
                                     $("<a>")
-                                        .attr("href","#")
+                                        .attr("href","introduction.html?commodity_id="+information[1].id)
                                         .append(
                                             $("<img>")
-                                                .attr("src","../images/act1.png")
+                                                .attr("src",IMAGE2+information[1].image)
                                         )
                                 )
 
