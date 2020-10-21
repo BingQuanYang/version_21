@@ -28,6 +28,10 @@ public class HomeServiceImpl implements HomeService {
         List<Headlines> headlines = classDao.selectHeadlinesInformation();
         List<Information> information = classDao.selectInformation();
         List<Category> categories = classDao.selectCategory();
+        List<Information> information1 = classDao.selectInformation2();
+        List<Category> categories1 = classDao.selectCategory2();
+        homeData.setCategories1(categories1);
+        homeData.setInformation1(information1);
         homeData.setCategories(categories);
         homeData.setInformation(information);
         homeData.setHeadlines(headlines);

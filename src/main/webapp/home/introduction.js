@@ -16,6 +16,8 @@ $(function () {
             showDetailsAll(result.data.details);
             //显示所有的图片
             showImgAll(result.data.img);
+            //显示商品
+            showSee(result.data.Recommends);
         }else {
             alert("系统繁忙!请稍后再试!!!");
         }
@@ -323,6 +325,16 @@ $(function () {
             )
         }
     }
+
+    function showimg(data) {
+        $('#imgs').append(
+            $('<a>').attr("href","../images/"+data.image)
+                .append(
+                    $('<img alt="细节展示放大镜特效" rel="../images/01.jpg" class="jqzoom">').attr("src","../images/"+data.image)
+                )
+
+        )
+    }
     /*获取URL中的id*/
     function getQueryString(name) {
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
@@ -332,14 +344,26 @@ $(function () {
         }
         return null;
     }
-    /*<!--<a href="../images/01.jpg"><img src="../images/01_mid.jpg" alt="细节展示放大镜特效" rel="../images/01.jpg" class="jqzoom" /></a>-->*/
-    function showimg(data) {
-        $('#imgs').append(
-            $('<a>').attr("href","../images/"+data.image)
-                .append(
-                    $('<img alt="细节展示放大镜特效"  class="jqzoom">').attr("src","../images/"+data.image)
-                )
 
-        )
+
+    function showSee(data) {
+        for (const da of data) {
+            $("#intr").append(
+                $('<div class="p-img">').append(
+                    $('<a  href="#">').append(
+                        $('<img class="" >').attr("src","../images/"+da.image)
+                    )
+                ),
+                $('<div class="p-name">').append(
+                    $('<a href="#">').text(da.shopDiscount)
+                ),$('<div class="p-price">').append(
+                    $('<strong>').text("￥"+da.promotiomPrice)
+                )
+            )
+
+
+        }
+
     }
+
 });

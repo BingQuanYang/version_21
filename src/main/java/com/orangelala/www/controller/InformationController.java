@@ -27,8 +27,8 @@ public class InformationController extends HttpServlet {
         ResponeEntiry<DetailData> entiry=new ResponeEntiry<>();
         try {
             String id = req.getParameter("commodity_id");
-            DetailData detailData = informationService.getIntroductionById(id);
-            entiry.setData(detailData);
+            DetailData introductions = informationService.getIntroductions(id);
+            entiry.setData(introductions);
             entiry.setStatus(200);
             entiry.setMsg("success");
             resp.setContentType(CONTENT_TYPE_JSON);
