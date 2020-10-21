@@ -3,9 +3,10 @@ $(function () {
     let   params = {
         uid: 1,
     }
-    $ajax.get("/Usercontroller",params,function (result) {
+    $.post("/UserController",params,function (result) {
         if (result.status === 200){
             let user = result.data;
+            alert(user)
             $("#username").text(user.username)
             $("#id").text(user.id)
             $("#name").text(user.name)
@@ -14,7 +15,7 @@ $(function () {
             $("#nian").text(user.nian)
             $("#yue").text(user.yue)
             $("#day").text(user.day)
-            $("#phone").text(user.phone)
+            $("#user-phone").text(user.phone)
             $("#email").text(user.email)
         }
 
