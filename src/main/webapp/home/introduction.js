@@ -2,8 +2,10 @@ let dase="http://localhost:8080/api/introduction";
 $(function () {
     let commodity=getQueryString("commodity_id");
     let params={
-        commodity_id:2
+        commodity_id:commodity
     };
+
+
     $.get(dase,params,function (result) {
         if(result.status===200){
             //显示商品的所有信息
