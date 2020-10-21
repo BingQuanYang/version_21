@@ -22,14 +22,26 @@ public interface ClassDao {
     List<Headlines> selectHeadlinesInformation();
 
     /**
-     * 查询所有信息
+     * 查询所有信息1
      * @return  所有信息
      */
     List<Information> selectInformation();
 
     /**
-     * 查询信息
+     * 查询所有信息2
+     * @return  所有信息
+     */
+    List<Information> selectInformation2();
+
+    /**
+     * 查询单体分类信息1
      * @return 信息
      */
     List<Category> selectCategory();
+
+    /**
+     * 查询单体分类信息2
+     * @return 信息
+     */
+    List<Category> selectCategory2();
 }
