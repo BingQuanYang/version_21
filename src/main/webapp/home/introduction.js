@@ -7,17 +7,19 @@ $(function () {
 
 
     $.get(dase,params,function (result) {
+        console.log(result);
         if(result.status===200){
             //显示商品的所有信息
             showinformation(result.data.infor);
             //显示商品介绍图片
             showimg(result.data.infor);
             //显示所有的商品的详细介绍
+
             showDetailsAll(result.data.details);
             //显示所有的图片
             showImgAll(result.data.img);
             //显示商品
-            showSee(result.data.Recommends);
+            showSee(result.data.recommends);
         }else {
             alert("系统繁忙!请稍后再试!!!");
         }
@@ -286,6 +288,7 @@ $(function () {
     }
 
     function showDetailsAll(data) {
+
         $("#details").append(
             $('<div class="J_Brand">').append(
                 $('<div class="attr-list-hd tm-clear">').append(
