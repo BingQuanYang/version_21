@@ -31,4 +31,14 @@ public class ClassDaoImplTest {
         List<Category> categories = classDao.selectCategory();
         System.out.println(categories);
     }
+    @Test
+    public void selectInformation2(){
+        List<Information> information = classDao.selectInformation();
+        System.out.println(information);
+    }
+    @Test
+    public void selectCategory2(){
+        List<Category> categories = classDao.selectCategory();
+        System.out.println(categories);
+    }
 }
