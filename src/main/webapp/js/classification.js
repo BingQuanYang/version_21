@@ -6,7 +6,7 @@
 const BASE_URL = "http://localhost:8080/api"
 let INDEX_URL = BASE_URL + "/HomeController"
 const IMAGE = "../images/"
-const IMAGE = "../images2/"
+
 
 $(function () {
     $.get(INDEX_URL, function (result) {
