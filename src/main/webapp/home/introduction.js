@@ -337,7 +337,7 @@ $(function () {
         $('#imgs').append(
             $('<a>').attr("href","../images/"+data.image)
                 .append(
-                    $('<img alt="细节展示放大镜特效" rel="../images/01.jpg" class="jqzoom">').attr("src","../images/"+data.image)
+                    $('<img alt="细节展示放大镜特效"  class="jqzoom">').attr("src","../images/"+data.image)
                 )
 
         )
