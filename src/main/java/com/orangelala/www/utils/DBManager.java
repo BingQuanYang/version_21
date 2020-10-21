@@ -216,7 +216,7 @@ public class DBManager {
      * @param sql   sql语句
      * @return   总数
      */
-    public static Integer selectCount(String sql){
+    public static Integer selectCount(String sql,Object ... obj){
         Connection connection = null;
         PreparedStatement ps = null;
         ResultSet rSet = null;
@@ -224,6 +224,12 @@ public class DBManager {
         try {
             connection = initConnection();
             ps = connection.prepareStatement(sql);
+            //给占位符赋值
+            if(obj != null){
+                for (int i = 0;i < obj.length;i++){
+                    ps.setObject(i+1,obj[i]);
+                }
+            }
             rSet = ps.executeQuery();
             if(rSet.next()){
                 count = rSet.getInt(1);

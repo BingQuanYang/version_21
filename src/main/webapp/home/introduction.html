@@ -20,7 +20,6 @@
 		<script type="text/javascript" src="../js/jquery.imagezoom.min.js"></script>
 		<script type="text/javascript" src="../js/jquery.flexslider.js"></script>
 		<script type="text/javascript" src="../js/list.js"></script>
-		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script type="text/javascript" src="introduction.js" ></script>
 
 	</head>
@@ -95,17 +94,17 @@
 					<li><a href="#">分类</a></li>
 					<li class="am-active">内容</li>
 				</ol>
-<!--				<script type="text/javascript">-->
-<!--					$(function() {});-->
-<!--					$(window).on("load",function() {-->
-<!--						$('.flexslider').flexslider({-->
-<!--							animation: "slide",-->
-<!--							start: function(slider) {-->
-<!--								$('body').removeClass('loading');-->
-<!--							}-->
-<!--						});-->
-<!--					});-->
-<!--				</script>-->
+				<script type="text/javascript">
+					$(function() {});
+					$(window).load(function() {
+						$('.flexslider').flexslider({
+							animation: "slide",
+							start: function(slider) {
+								$('body').removeClass('loading');
+							}
+						});
+					});
+				</script>
 				<div class="scoll">
 					<section class="slider">
 						<div class="flexslider">
@@ -130,16 +129,16 @@
 					<div class="clearfixLeft" id="clearcontent">
 
 						<div class="box">
-<!--							<script type="text/javascript">-->
-<!--								$(document).ready(function() {-->
-<!--									$(".jqzoom").imagezoom();-->
-<!--									$("#thumblist li a").click(function() {-->
-<!--										$(this).parents("li").addClass("tb-selected").siblings().removeClass("tb-selected");-->
-<!--										$(".jqzoom").attr('src', $(this).find("img").attr("mid"));-->
-<!--										$(".jqzoom").attr('rel', $(this).find("img").attr("big"));-->
-<!--									});-->
-<!--								});-->
-<!--							</script>-->
+							<script type="text/javascript">
+								$(document).ready(function() {
+									$(".jqzoom").imagezoom();
+									$("#thumblist li a").click(function() {
+										$(this).parents("li").addClass("tb-selected").siblings().removeClass("tb-selected");
+										$(".jqzoom").attr('src', $(this).find("img").attr("mid"));
+										$(".jqzoom").attr('rel', $(this).find("img").attr("big"));
+									});
+								});
+							</script>
 
 							<div class="tb-booth tb-pic tb-s310">
 								<a href="../images/01.jpg"><img src="../images/01_mid.jpg" alt="细节展示放大镜特效" rel="../images/01.jpg" class="jqzoom" /></a>
@@ -461,8 +460,8 @@
 
 							<div class="am-tabs-bd">
 
-								<div class="am-tab-panel am-fade am-in am-active">
-									<div class="J_Brand">
+								<div class="am-tab-panel am-fade am-in am-active" id="details">
+									<!--<div class="J_Brand">
 
 										<div class="attr-list-hd tm-clear">
 											<h4>产品参数：</h4></div>
@@ -497,7 +496,7 @@
 										</div>
 									</div>
 									<div class="clear"></div>
-
+-->
 								</div>
 
 								<div class="am-tab-panel am-fade">

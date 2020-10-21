@@ -1,13 +1,12 @@
-/*const INTOR_URL="http://localhost:8080/api";*/
-const INTOR_URL="http://localhost:.8080/api/";
+const INTOR_URL="http://localhost:8080/api";
 let detailUrl=INTOR_URL+"/introduction";
+let detailsBase_Url=INTOR_URL+"detials?detials_id=1";
 $(function () {
     let commodity=getQueryString("commodity_id");
     let params={
         commodity_id:commodity
     };
     $.get(detailUrl,params,function (result) {
-        console.log(result.data)
         if(result.status===200){
             //显示商品的所有信息
             showinformation(result.data);
@@ -58,20 +57,20 @@ $(function () {
                             $("<div>").addCalss("am-form-content address")
                                 .append(
                                     $("<select data-am-selected>").append(
-                                        $("<option value='a'>").text(data.address),
-                                        $("<option value='b'>").text(data.address)
+                                        $("<option value='a'>").text("浙江省"),
+                                        $("<option value='b'>").text("湖北省")
                                     ),
                                     $("<select data-am-selected>").append(
-                                        $("<option value='a'>").text(data.address),
-                                        $("<option value='b'>").text(data.address)
+                                        $("<option value='a'>").text("温州市"),
+                                        $("<option value='b'>").text("武汉市")
                                     ),
                                     $("<select data-am-selected>").append(
-                                        $("<option value='a'>").text(data.address),
-                                        $("<option value='b'>").text(data.address)
+                                        $("<option value='a'>").text("瑞安区"),
+                                        $("<option value='b'>").text("洪山区")
                                     )
                                 ),
                             $("<div>").addClass("pay-logis")
-                                .text(data.address)
+                                .text("快递")
                                 .append(
                                     $("<b>").text(data.freight+"元")
                                 )
@@ -113,7 +112,7 @@ $(function () {
                         )
                 ),
             $("<div>").addClass("clear"),
-            $("<div>").addClass("iteminfo_parameter sys_item_specpara")
+            $("<dl>").addClass("iteminfo_parameter sys_item_specpara")
                 .append(
                     $("<dt>").addClass("theme-login")
                         .append(
@@ -196,7 +195,7 @@ $(function () {
                                                                     $('<input id="min"  name="" type="button" value="-">').addClass("am-btn am-btn-default"),
                                                                     $('<input id="text_box" name="" type="text" value="1" style="width:30px;" >'),
                                                                     $('<input id="add" class="am-btn am-btn-default" name="" type="button" value="+">'),
-                                                                    $('<input id="Stock">').addClass("tb-hidden")
+                                                                    $('<span id="Stock">').addClass("tb-hidden")
                                                                         .text("库存")
                                                                         .append(
                                                                             $("<span>").addClass("stock")
@@ -230,39 +229,6 @@ $(function () {
                                                                                     .text(data.stock+"件")
                                                                             )
                                                                     )
-                                                            ),
-                                                        $("<div>").addClass("clear"),
-                                                        $("<div>").addClass("shopPromotion gold")
-                                                            .append(
-                                                                $("<div>").addClass("hot")
-                                                                    .append(
-                                                                        $("<dt>").addClass("tb-metatit")
-                                                                            .text("店铺优惠"),
-                                                                        $("<div>").addClass("gold-list")
-                                                                            .append(
-                                                                                $("<p>").text("购物满2件打8折，满3件7折")
-                                                                                    .append(
-                                                                                        $("<span>").text("点击领券")
-                                                                                            .append(
-                                                                                                $("<i>").addClass("am-icon-sort-down")
-                                                                                            )
-                                                                                    )
-                                                                            )
-                                                                    ),
-                                                                $("<div>").addClass("clear"),
-                                                                $("<div>").addClass("coupon")
-                                                                    .append(
-                                                                        $("<dt>").addClass("tb-metatit")
-                                                                            .text("优惠券"),
-                                                                        $("<div>").addClass("gold-list")
-                                                                            .append(
-                                                                                $("<ul>").append(
-                                                                                    $("<li>").text("125减5"),
-                                                                                    $("<li>").text("198减10"),
-                                                                                    $("<li>").text("298减20")
-                                                                                )
-                                                                            )
-                                                                    )
                                                             )
 
                                                     )
@@ -272,6 +238,39 @@ $(function () {
                             )
 
                     )
+                ),
+            $("<div>").addClass("clear"),
+            $("<div>").addClass("shopPromotion gold")
+                .append(
+                    $("<div>").addClass("hot")
+                        .append(
+                            $("<dt>").addClass("tb-metatit")
+                                .text("店铺优惠"),
+                            $("<div>").addClass("gold-list")
+                                .append(
+                                    $("<p>").text("购物满2件打8折，满3件7折")
+                                        .append(
+                                            $("<span>").text("点击领券")
+                                                .append(
+                                                    $("<i>").addClass("am-icon-sort-down")
+                                                )
+                                        )
+                                )
+                        ),
+                    $("<div>").addClass("clear"),
+                    $("<div>").addClass("coupon")
+                        .append(
+                            $("<dt>").addClass("tb-metatit")
+                                .text("优惠券"),
+                            $("<div>").addClass("gold-list")
+                                .append(
+                                    $("<ul>").append(
+                                        $("<li>").text("125减5"),
+                                        $("<li>").text("198减10"),
+                                        $("<li>").text("298减20")
+                                    )
+                                )
+                        )
                 )
 
         )
@@ -288,3 +287,67 @@ $(function () {
     }
 });
 
+$(function () {
+    let commodity=getQueryString("details_id");
+    let params={
+        commodity_id:commodity
+    };
+        $.get(detailsBase_Url,params,function (result) {
+            if(result.status===200){
+                showDetailsAll(result.data);
+            }else{
+                alert("系统繁忙，请稍候再试");
+            }
+        });
+
+        function showDetailsAll(data) {
+            $("#details").append(
+                $('<div class="J_Brand">').append(
+                    $('<div class="attr-list-hd tm-clear">').append(
+                        $('<h4>').text("产品参数：")
+                    ),
+                    $('<div class="clear">'),
+                    $('<ul id="J_AttrUL">').append(
+                        $('<li title="">').text("产品类型: "+data.productType),
+                        $('<li title="">').text("原料产地: "+data.producingArea),
+                        $('<li title="">').text("产地: "+data.area),
+                        $('<li title="">').text("配料表: "+data.burdenSheet),
+                        $('<li title="">').text("产品规格: "+data.productSpecifications),
+                        $('<li title="">').text("保质期: "+data.shelfLife),
+                        $('<li title="">').text("产品标准号: "+data.psCode),
+                        $('<li title="">').text("生产许可证编号： "+data.plNumber),
+                        $('<li title="">').text("储存方法： "+data.storages),
+                        $('<li title="">').text("食用方法： "+data.eatMethod),
+                    ),
+                    $('<div class="clear">')
+                ),
+                $('<div class="details">').append(
+                    $('<div class="attr-list-hd after-market-hd">').append(
+                        $("<h4>").text("商品细节")
+                    ),
+                    $('<div class="twlistNews">').append(
+                        $("<img>").attr("src",data.image),
+                        $("<img>").attr("src",data.image),
+                        $("<img>").attr("src",data.image),
+                        $("<img>").attr("src",data.image),
+                        $("<img>").attr("src",data.image),
+                        $("<img>").attr("src",data.image),
+                        $("<img>").attr("src",data.image),
+                    )
+                ),
+                $('<div class="clear">')
+            )
+
+        }
+
+    /*获取URL中的id*/
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) {
+            return unescape(r[2]);
+        }
+        return null;
+    }
+
+});
