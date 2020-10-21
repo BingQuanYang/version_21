@@ -7,9 +7,12 @@ import com.orangelala.www.dao.impl.DetailsDaoImpl;
 import com.orangelala.www.dao.impl.ImgDaoImpl;
 import com.orangelala.www.dao.impl.InformationDaoImpl;
 import com.orangelala.www.entity.Details;
+import com.orangelala.www.entity.Img;
 import com.orangelala.www.entity.Information;
 import com.orangelala.www.service.InformationService;
 import com.orangelala.www.utils.DetailData;
+
+import java.util.List;
 
 public class InformationServiceImpl implements InformationService {
     InformationDao informationDao=new InformationDaoImpl();
@@ -31,4 +34,20 @@ public class InformationServiceImpl implements InformationService {
         detailData.setImg(imgDao.getImgsById(id));
         return detailData;
     }
+
+    @Override
+    public DetailData getIntroductions(String id) {
+        DetailData detailData = new DetailData();
+        Information info = informationDao.getIntroductionById(id);
+        Details detailsById = detailsDao.getDetailsById(id);
+        List<Img> imgsById = imgDao.getImgsById(id);
+        List<Information> recommend = informationDao.getRecommend(id);
+        detailData.setInfor(info);
+        detailData.setDetails(detailsById);
+        detailData.setImg(imgsById);
+        detailData.setRecommends(recommend);
+        return detailData;
+    }
+
+
 }
