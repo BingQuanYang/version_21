@@ -10,6 +10,15 @@ public class DetailData {
     public Information infor;
     public Details details;
     public List<Img> img;
+    public List<Information> Recommends;
+
+    public List<Information> getRecommends() {
+        return Recommends;
+    }
+
+    public void setRecommends(List<Information> recommends) {
+        Recommends = recommends;
+    }
 
     public Information getInfor() {
         return infor;
