@@ -2,7 +2,7 @@ let dase="http://localhost:8080/api/introduction";
 $(function () {
     let commodity=getQueryString("commodity_id");
     let params={
-        commodity_id:commodity
+        commodity_id:2
     };
 
 
@@ -10,6 +10,8 @@ $(function () {
         if(result.status===200){
             //显示商品的所有信息
             showinformation(result.data.infor);
+            //显示商品介绍图片
+            showimg(result.data.infor);
             //显示所有的商品的详细介绍
             showDetailsAll(result.data.details);
             //显示所有的图片
@@ -280,6 +282,7 @@ $(function () {
         )
 
     }
+
     function showDetailsAll(data) {
         $("#details").append(
             $('<div class="J_Brand">').append(
@@ -300,23 +303,25 @@ $(function () {
                     $('<li title="">').text("食用方法： "+data.eatMethod),
                 ),
                 $('<div class="clear">')
+            ),
+            $('<div class="details" >').append(
+                $('<div class="attr-list-hd after-market-hd">').append(
+                    $("<h4>").text("商品细节")
+                ),
             )
 
         )
 
     }
+
     function showImgAll(data) {
         for (const da of data) {
-            $('#detailss').append(
-                $('<div class="attr-list-hd after-market-hd">').append(
-                    $("<h4>").text("商品细节")
-                ),
+            $('#details').append(
                 $('<div class="twlistNews">').append(
                     $("<img>").attr("src",da.image)
                 )
             )
         }
-
     }
     /*获取URL中的id*/
     function getQueryString(name) {
@@ -326,5 +331,15 @@ $(function () {
             return unescape(r[2]);
         }
         return null;
+    }
+    /*<!--<a href="../images/01.jpg"><img src="../images/01_mid.jpg" alt="细节展示放大镜特效" rel="../images/01.jpg" class="jqzoom" /></a>-->*/
+    function showimg(data) {
+        $('#imgs').append(
+            $('<a>').attr("href","../images/"+data.image)
+                .append(
+                    $('<img alt="细节展示放大镜特效" rel="../images/01.jpg" class="jqzoom">').attr("src","../images/"+data.image)
+                )
+
+        )
     }
 });
