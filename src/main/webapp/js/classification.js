@@ -211,16 +211,16 @@ $(function () {
                                         .append(
                                             $('<div class="outer-con ">')
                                                 .append(
-                                                    $('<div class="title ">').text("123")
+                                                    $('<div class="title ">').text(information[2].shopDiscount)
                                                 )
                                                 .append(
-                                                    $('<div class="sub-title ">').text("321")
+                                                    $('<div class="sub-title ">').text(information[2].promotiomPrice)
                                                 )
                                         )
                                         .append(
-                                            $('<a>').attr("href","#")
+                                            $('<a>').attr("href","introduction.html?commodity_id="+information[2].id)
                                                 .append(
-                                                    $("<img>").attr("src","../images/1.jpg ")
+                                                    $("<img>").attr("src",IMAGE2+information[2].image)
                                                 )
                                         )
                                 )
@@ -235,16 +235,16 @@ $(function () {
                                         .append(
                                             $('<div class="outer-con ">')
                                                 .append(
-                                                    $('<div class="title ">').text("123")
+                                                    $('<div class="title ">').text(information[3].shopDiscount)
                                                 )
                                                 .append(
-                                                    $('<div class="sub-title ">').text("321")
+                                                    $('<div class="sub-title ">').text(information[3].promotiomPrice)
                                                 )
                                         )
                                         .append(
-                                            $('<a>').attr("href","#")
+                                            $('<a>').attr("href","introduction.html?commodity_id="+information[3].id)
                                                 .append(
-                                                    $("<img>").attr("src","../images/1.jpg ")
+                                                    $("<img>").attr("src",IMAGE2+information[3].image)
                                                 )
                                         )
                                 )
@@ -259,16 +259,16 @@ $(function () {
                                         .append(
                                             $('<div class="outer-con ">')
                                                 .append(
-                                                    $('<div class="title ">').text("123")
+                                                    $('<div class="title ">').text(information[4].shopDiscount)
                                                 )
                                                 .append(
-                                                    $('<div class="sub-title ">').text("321")
+                                                    $('<div class="sub-title ">').text(information[4].promotiomPrice)
                                                 )
                                         )
                                         .append(
-                                            $('<a>').attr("href","#")
+                                            $('<a>').attr("href","introduction.html?commodity_id="+information[4].id)
                                                 .append(
-                                                    $("<img>").attr("src","../images/1.jpg ")
+                                                    $("<img>").attr("src",IMAGE2+information[4].image)
                                                 )
                                         )
                                 )
@@ -283,16 +283,16 @@ $(function () {
                                         .append(
                                             $('<div class="outer-con ">')
                                                 .append(
-                                                    $('<div class="title ">').text("123")
+                                                    $('<div class="title ">').text(information[5].shopDiscount)
                                                 )
                                                 .append(
-                                                    $('<div class="sub-title ">').text("321")
+                                                    $('<div class="sub-title ">').text(information[5].promotiomPrice)
                                                 )
                                         )
                                         .append(
-                                            $('<a>').attr("href","#")
+                                            $('<a>').attr("href","introduction.html?commodity_id="+information[5].id)
                                                 .append(
-                                                    $("<img>").attr("src","../images/1.jpg ")
+                                                    $("<img>").attr("src",IMAGE2+information[5].image)
                                                 )
                                         )
                                 )
@@ -307,16 +307,16 @@ $(function () {
                                         .append(
                                             $('<div class="outer-con ">')
                                                 .append(
-                                                    $('<div class="title ">').text("123")
+                                                    $('<div class="title ">').text(information[6].shopDiscount)
                                                 )
                                                 .append(
-                                                    $('<div class="sub-title ">').text("321")
+                                                    $('<div class="sub-title ">').text(information[6].promotiomPrice)
                                                 )
                                         )
                                         .append(
-                                            $('<a>').attr("href","#")
+                                            $('<a>').attr("href","introduction.html?commodity_id="+information[6].id)
                                                 .append(
-                                                    $("<img>").attr("src","../images/1.jpg ")
+                                                    $("<img>").attr("src",IMAGE2+information[6].image)
                                                 )
                                         )
                                 )
