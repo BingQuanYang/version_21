@@ -38,8 +38,26 @@ public class ClassDaoImpl implements ClassDao {
     }
 
     @Override
+    public List<Information> selectInformation2() {
+        int id = 2;
+        String sql = "select * from information where c_id=?";
+        Class<Information> informationClass = Information.class;
+        List<Information> information = DBManager.selectList(sql, informationClass, id);
+        return information;
+    }
+
+    @Override
     public List<Category> selectCategory() {
         int id = 1;
+        String sql = "select * from Category where id=?";
+        Class<Category> categoryClass = Category.class;
+        List<Category> categories = DBManager.selectList(sql, categoryClass, id);
+        return categories;
+    }
+
+    @Override
+    public List<Category> selectCategory2() {
+        int id = 2;
         String sql = "select * from Category where id=?";
         Class<Category> categoryClass = Category.class;
         List<Category> categories = DBManager.selectList(sql, categoryClass, id);
