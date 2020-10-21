@@ -73,6 +73,113 @@ $(function () {
     }
     function showInformation(information) {
             $("#zhangkunshan4568")
+                .append(
+                    $('<div class="am-u-sm-5 am-u-md-3 text-one list">')
+                        .append(
+                            $('<div class="word">')
+                                .append(
+                                    $('<a class="outer">').attr("href","#")
+                                        .append(
+                                            $("<span class=\"inner\">")
+                                                .append(
+                                                    $('<b class="text">')
+                                                )
+                                        )
+                                )
+                                .append(
+                                    $('<a class="outer">').attr("href","#")
+                                        .append(
+                                            $("<span class=\"inner\">")
+                                                .append(
+                                                    $('<b class="text">')
+                                                )
+                                        )
+                                )
+                                .append(
+                                    $('<a class="outer">').attr("href","#")
+                                        .append(
+                                            $("<span class=\"inner\">")
+                                                .append(
+                                                    $('<b class="text">')
+                                                )
+                                        )
+                                )
+                                .append(
+                                    $('<a class="outer">').attr("href","#")
+                                        .append(
+                                            $("<span class=\"inner\">")
+                                                .append(
+                                                    $('<b class="text">')
+                                                )
+                                        )
+                                )
+                                .append(
+                                    $('<a class="outer">').attr("href","#")
+                                        .append(
+                                            $("<span class=\"inner\">")
+                                                .append(
+                                                    $('<b class="text">')
+                                                )
+                                        )
+                                )
+                                .append(
+                                    $('<a class="outer">').attr("href","#")
+                                        .append(
+                                            $("<span class=\"inner\">")
+                                                .append(
+                                                    $('<b class="text">')
+                                                )
+                                        )
+                                )
+                                .append(
+                                    $('<a class="outer">').attr("href","#")
+                                        .append(
+                                            $("<span class=\"inner\">")
+                                                .append(
+                                                    $('<b class="text">')
+                                                )
+                                        )
+                                )
+                                .append(
+                                    $('<a class="outer">').attr("href","#")
+                                        .append(
+                                            $("<span class=\"inner\">")
+                                                .append(
+                                                    $('<b class="text">')
+                                                )
+                                        )
+                                )
+                                .append(
+                                    $('<a class="outer">').attr("href","#")
+                                        .append(
+                                            $("<span class=\"inner\">")
+                                                .append(
+                                                    $('<b class="text">')
+                                                )
+                                        )
+                                )
+                        )
+                        .append(
+                            $("<a>").attr("href","#")
+                                .append(
+                                    $('<img>').attr("src","../images/5.jpg")
+                                )
+                                .append(
+                                    $('<div class="outer-con ">')
+                                        .append(
+                                            $('<div class="title ">').text("123")
+                                        )
+                                        .append(
+                                            $('<div class="sub-title ">').text("321")
+                                        )
+                                )
+                        )
+                        .append(
+                            $('<div class="triangle-topright">')
+                        )
+                )
+                .append(
+                    $("<div>")
                         .append(
                             $('<div class="am-u-sm-7 am-u-md-5 am-u-lg-2 text-two big">')
                                 .append(
@@ -214,6 +321,8 @@ $(function () {
                                         )
                                 )
                         )
+                )
+
 
     }
     /**
