@@ -2,7 +2,7 @@ let dase="http://localhost:8080/api/introduction";
 $(function () {
     let commodity=getQueryString("commodity_id");
     let params={
-        commodity_id:2
+        commodity_id:commodity
     };
 
 
