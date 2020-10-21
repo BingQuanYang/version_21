@@ -44,4 +44,9 @@ public class ShoppingCartDaoTest {
         System.out.println(shoppingCartDao.deleteshoppingCart("2", "6"));
         System.out.println(shoppingCartDao.deleteshoppingCart("2", "6"));
     }
+
+    @Test
+    public void selectNumberByUserIdAndCommodityId(){
+        System.out.println(shoppingCartDao.selectNumberByUserIdAndCommodityId("1", "4"));
+    }
 }
