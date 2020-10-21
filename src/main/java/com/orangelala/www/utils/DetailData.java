@@ -10,14 +10,14 @@ public class DetailData {
     public Information infor;
     public Details details;
     public List<Img> img;
-    public List<Information> Recommends;
+    public List<Information> recommends;
 
     public List<Information> getRecommends() {
-        return Recommends;
+        return recommends;
     }
 
     public void setRecommends(List<Information> recommends) {
-        Recommends = recommends;
+        this.recommends = recommends;
     }
 
     public Information getInfor() {
