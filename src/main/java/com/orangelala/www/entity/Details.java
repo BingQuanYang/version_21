@@ -5,8 +5,10 @@ import com.orangelala.www.utils.Column;
 
 public class Details {
 
-  private String id;//商品id
-
+  private String id;
+  //商品id
+  @Column("p_id")
+  private String p_id;
   @Column("product_type")
   private String productType;//产品类型
 
@@ -157,4 +159,11 @@ public class Details {
     this.isDelete = isDelete;
   }
 
+  public String getP_id() {
+    return p_id;
+  }
+
+  public void setP_id(String p_id) {
+    this.p_id = p_id;
+  }
 }

@@ -1,9 +1,11 @@
 package com.orangelala.www.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.orangelala.www.entity.Details;
 import com.orangelala.www.entity.Information;
 import com.orangelala.www.service.InformationService;
 import com.orangelala.www.service.impl.InformationServiceImpl;
+import com.orangelala.www.utils.DetailData;
 import com.orangelala.www.utils.ResponeEntiry;
 import com.orangelala.www.utils.ResponseUtils;
 
@@ -22,11 +24,11 @@ public class InformationController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        ResponeEntiry<Information>entiry=new ResponeEntiry<>();
+        ResponeEntiry<DetailData> entiry=new ResponeEntiry<>();
         try {
             String id = req.getParameter("commodity_id");
-            Information introductionById = informationService.getIntroductionById(id);
-            entiry.setData(introductionById);
+            DetailData detailData = informationService.getIntroductionById(id);
+            entiry.setData(detailData);
             entiry.setStatus(200);
             entiry.setMsg("success");
             resp.setContentType(CONTENT_TYPE_JSON);

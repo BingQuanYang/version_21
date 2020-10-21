@@ -1,7 +1,8 @@
 package com.orangelala.www.service;
 
 import com.orangelala.www.entity.Information;
+import com.orangelala.www.utils.DetailData;
 
 public interface InformationService {
-    Information getIntroductionById(String id);
+    DetailData getIntroductionById(String id);
 }

@@ -9,9 +9,8 @@ public class DetailsDaoImpl implements DetailsDao {
     @Override
     public Details getDetailsById(String id) {
 //        String sql="select id,productType,producingArea,area,burdenSheet,productSpecifications,shelfLife,psCode,plNumber,storages,eatMethod,image,isDelete from details where id=?";
-        String sql="select * from details where id=?";
+        String sql="select * from details where p_id=?";
         Details details = DBManager.selectOne(sql, Details.class, id);
-
         return details;
     }
 
