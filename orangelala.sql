@@ -167,13 +167,13 @@ CREATE TABLE `img` (
 -- ----------------------------
 -- Records of img
 -- ----------------------------
-INSERT INTO `img` VALUES ('1', '1', '../images/tw1.jpg\"', '0');
-INSERT INTO `img` VALUES ('2', '1', '../images/tw2.jpg\"', '0');
-INSERT INTO `img` VALUES ('3', '1', '../images/tw3.jpg\"', '0');
-INSERT INTO `img` VALUES ('4', '1', '../images/tw4.jpg\"', '0');
-INSERT INTO `img` VALUES ('5', '1', '../images/tw5.jpg\"', '0');
-INSERT INTO `img` VALUES ('6', '1', '../images/tw6.jpg\"', '0');
-INSERT INTO `img` VALUES ('7', '1', '../images/tw7.jpg\"', '0');
+INSERT INTO `img` VALUES ('1', '1', '../images/tw1.jpg', '0');
+INSERT INTO `img` VALUES ('2', '1', '../images/tw2.jpg', '0');
+INSERT INTO `img` VALUES ('3', '1', '../images/tw3.jpg', '0');
+INSERT INTO `img` VALUES ('4', '1', '../images/tw4.jpg', '0');
+INSERT INTO `img` VALUES ('5', '1', '../images/tw5.jpg', '0');
+INSERT INTO `img` VALUES ('6', '1', '../images/tw6.jpg', '0');
+INSERT INTO `img` VALUES ('7', '1', '../images/tw7.jpg', '0');
 
 -- ----------------------------
 -- Table structure for information
