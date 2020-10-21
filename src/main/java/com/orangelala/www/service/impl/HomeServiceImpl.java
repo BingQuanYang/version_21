@@ -5,10 +5,7 @@ import com.orangelala.www.dao.SeckillDao;
 import com.orangelala.www.dao.impl.ClassDaoImpl;
 import com.orangelala.www.dao.impl.InformationDaoImpl;
 import com.orangelala.www.dao.impl.SeckillDaoImpl;
-import com.orangelala.www.entity.Classification;
-import com.orangelala.www.entity.Headlines;
-import com.orangelala.www.entity.Information;
-import com.orangelala.www.entity.Seckill;
+import com.orangelala.www.entity.*;
 import com.orangelala.www.service.HomeService;
 import com.orangelala.www.utils.HomeData;
 
@@ -29,6 +26,10 @@ public class HomeServiceImpl implements HomeService {
          */
         List<Classification> classes = classDao.selectClassInformation();
         List<Headlines> headlines = classDao.selectHeadlinesInformation();
+        List<Information> information = classDao.selectInformation();
+        List<Category> categories = classDao.selectCategory();
+        homeData.setCategories(categories);
+        homeData.setInformation(information);
         homeData.setHeadlines(headlines);
         homeData.setClasses(classes);
 
