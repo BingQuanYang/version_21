@@ -12,11 +12,11 @@ $(function () {
         if (result.status === 200) {
             showClassification(result.data.classes);
             showHeadlines(result.data.headlines);
+            showSeckill(result.data.seckill);
             showCategory(result.data.categories);
             showInformation(result.data.information);
             showCategory2(result.data.categories1);
             showInformation2(result.data.information1);
-            showSeckill(result.data.seckill);
         } else {
             alert("系统繁忙!请稍后再试!!!")
         }
